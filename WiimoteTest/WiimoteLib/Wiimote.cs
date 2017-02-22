@@ -33,7 +33,7 @@ namespace WiimoteLib
 
 		// VID = Nintendo, PID = Wiimote
 		private const int VID = 0x057e;
-		private const int PID = 0x0306;
+		private const int PID = 0x0330;
 
 		// sure, we could find this out the hard way using HID, but trust me, it's 22
 		private const int REPORT_LENGTH = 22;
@@ -700,10 +700,10 @@ namespace WiimoteLib
 		{
 			switch(type)
 			{
-				case InputReport.IRAccel:
+				case InputReport.IRExtensionAccel:
 					EnableIR(IRMode.Extended);
 					break;
-				case InputReport.IRExtensionAccel:
+				case InputReport.IRAccel:
 					EnableIR(IRMode.Basic);
 					break;
 				default:
